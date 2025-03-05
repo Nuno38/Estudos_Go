@@ -27,13 +27,13 @@ func limpaTela(){
 }
 
 func telaInicial(){
-	fmt.Printf("\nBem vindo ao surpermecado Virtual escolha um produto❗")
+	fmt.Printf("\nBem vindo ao supermercado Virtual escolha um produto❗")
 	time.Sleep(3*time.Second)
 	limpaTela()
 }
 
 func apresentacaoProdutos(){
-	fmt.Printf("Lista de produtos")
+	fmt.Printf("\nLista de produtos")
 	fmt.Printf("\n1. Café R$ 26,50")
 	fmt.Printf("\n2. Ovo R$ 28,50")
 	fmt.Printf("\n3. Filé mignon R$ 58,00/Kg")
@@ -45,6 +45,7 @@ func apresentacaoProdutos(){
 
 func escolha_Realizada(){
 
+	for{
 	apresentacaoProdutos()
 
 	var escolha string
@@ -57,30 +58,30 @@ func escolha_Realizada(){
 	switch escolha {
 	case "1":
 		fmt.Printf("\nVocê escolheu um 1kg de café. ")
+		return
 	case "2":
 		fmt.Printf("\nVocê escolheu uma bandeja com 30 ovos.")
+		return
 	case "3":
 		fmt.Printf("\nVocê escolheu 1kg de Filé mignon.")
+		return
 	case "4":
 		fmt.Printf("\nVocê escolheu 1kg de Carne Moída.")
+		return
 	case "5":
 		fmt.Printf("\nVocê escolheu 1kg de Peito de frango.")
-    case "nem","fudendo","está","muito","mano","que","caro":{
-		fmt.Printf("\nFaz o L ai!\n")
+		return
+    case "tão","porque","puta","jesus","vix","ai","ta","loco","nem","fudendo","está","muito","mano","que","caro":{
+		fmt.Printf("\nFaz o L ai parceiro!\n")
+		return
     }
-    case "jesus":{
-		fmt.Printf("\nFaz o L ai!\n")
-    }
-    case "Vix":{
-		fmt.Printf("\nFaz o L ai!\n")
-    }
+
 	default:
 		fmt.Printf("Escolha incorreta!\n\n escolha novamente um número na lista apresentada!")
 		time.Sleep(3*time.Second)
-		main()
 		
 	}
-	
+ }
 }
 func main(){
 	limpaTela()

@@ -72,7 +72,9 @@ func escolha_Realizada(){
 		fmt.Printf("\nVocê escolheu 1kg de Peito de frango.")
 		return
     case "tão","porque","puta","jesus","vix","ai","ta","loco","nem","fudendo","está","muito","mano","que","caro":{
-		fmt.Printf("\nFaz o L ai parceiro!\n")
+		fmt.Printf("\nSe você vai num mercado aí em Salvador e você desconfia que tal produto está caro, você não compra❗")
+		fmt.Printf("\nFaz o L ai.....\n")
+		fmt.Print("\n")
 		return
     }
 

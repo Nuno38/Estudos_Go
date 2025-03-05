@@ -40,20 +40,22 @@ func apresentacaoProdutos(){
 	fmt.Printf("\n4. Carne moída R$ 34,98/kg")
 	fmt.Printf("\n5. Peito de frango R$ 15,60/KG\n")
 
-	fmt.Printf("\n\nRealize sua escolha:")
+	fmt.Printf("\n\nEscolhauma das opções:")
 }
-
-func escolha_Realizada(){
-
-	for{
-	apresentacaoProdutos()
-
+func leituraEscolhaFeita() string{
 	var escolha string
 	
     fmt.Scan(&escolha)
 	escolha = strings.TrimSpace(escolha)
 	escolha = strings.ToLower(escolha) 
-    limpaTela()
+	return escolha
+}
+
+func escolhaRealizada(){
+
+	for{
+	apresentacaoProdutos()
+	escolha := leituraEscolhaFeita()
 
 	switch escolha {
 	case "1":
@@ -79,8 +81,9 @@ func escolha_Realizada(){
     }
 
 	default:
-		fmt.Printf("Escolha incorreta!\n\n escolha novamente um número na lista apresentada!")
+		fmt.Printf("\nEscola novamente um número das opções apresentadas❗")
 		time.Sleep(3*time.Second)
+		limpaTela()
 		
 	}
  }
@@ -88,5 +91,5 @@ func escolha_Realizada(){
 func main(){
 	limpaTela()
 	telaInicial()
-	escolha_Realizada()
+	escolhaRealizada()
 }
